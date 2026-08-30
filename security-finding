@@ -1,0 +1,56 @@
+Security Findings
+Firewall Configuration
+
+Status: Configured
+
+The UFW firewall is active and uses a default-deny policy for incoming connections.
+
+Finding: The firewall provides a basic layer of protection against unwanted incoming network connections.
+
+Recommendation: Keep the firewall enabled and regularly review the rules to ensure only required services are allowed.
+
+SSH Configuration
+
+Status: Configured and operational
+
+The SSH service is active, running, and enabled to start automatically.
+
+Finding: SSH remote access is available and functioning correctly.
+
+Recommendation: Use strong authentication and consider SSH keys instead of password authentication where appropriate.
+
+SSH Firewall Access
+
+Status: Verified
+
+SSH is listening on port 22 and has been allowed through the UFW firewall. A successful localhost SSH connection was completed.
+
+Finding: SSH connectivity has been successfully tested.
+
+Recommendation: Restrict SSH access to trusted users or networks where possible.
+
+Network Configuration
+
+Status: Verified
+
+The Ubuntu virtual machine has the IPv4 address 10.0.2.15/24.
+
+Finding: The system has a valid network configuration.
+
+Recommendation: Avoid unnecessary network exposure and review network settings regularly.
+
+System Resources
+
+Status: Reviewed
+
+RAM, swap, disk storage, kernel version, and system uptime were checked.
+
+Finding: The system has available memory, unused swap capacity, and available disk space.
+
+Recommendation: Continue monitoring system resources and maintain sufficient free storage for updates and security logs.
+
+Overall Assessment
+
+The Ubuntu virtual machine has basic defensive security controls configured. The UFW firewall is active, SSH is operational and enabled, and SSH connectivity has been successfully tested.
+
+Regular system updates, firewall-rule reviews, strong SSH authentication, and security monitoring are recommended.
