@@ -1,0 +1,43 @@
+DEFENSIVE CONFIGURATION REVIEW
+Linux Security configuration checks
+
+System information 
+
+hostname: omoniyi-virtualbox
+operating system: ubuntu 26.04 LTS
+codename: resolute
+kernel: 7.0.0-29-generic
+ip address: 10.0.2.15/24
+
+SSH Configuration
+
+SSH service status: Active(runing)
+SSH service startup; enable
+SSH listening port:22
+SSH firewall access: Allowed
+SSH locahost test: successful
+
+firewall configuration
+firewall: UFW
+Firewall status: Active
+Default incoming policy: Allow
+SSH rule Allow SSH traffic
+system resources
+RAM: Approximately 5.3GiB
+RAM in use: Approximately 1.3 GiB
+Available RAM: Approximately 2.4 GiB
+Swap: 2.0GiB
+Swap in use: 0MiB
+Storage
+
+Main filesystem: Approximately 24GB
+Used: Approximately 11GB
+Available: Approximately 47%
+
+system uptime
+Approximately 1 hour 43 minutes at the time of check
+
+summary
+
+The ubuntu virtual machine was reviewed for basic defensive security configuration. The UFW firewall is active with incoming connections denied by default, while SSH access is explicitly allowed. The SSH service is running, enabled to start automatically, listening on port 22, and was successfully tested using an SSH connection to localhost.
+
