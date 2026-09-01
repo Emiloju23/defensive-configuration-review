@@ -1,0 +1,108 @@
+</> JSON
+{ 
+  "Cell": {
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## System Information\n",
+    "\n",
+    "- Operating System: Ubuntu 26.04 LTS\n",
+    "- Codename: resolute\n",
+    "- Kernel: 7.0.0-29-generic\n",
+    "- SSH: Active and running\n",
+    "- Firewall: UFW active\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Password Policy\n",
+    "\n",
+    "- PASS_MAX_DAYS: 99999\n",
+    "- PASS_MIN_DAYS: 0\n",
+    "- PASS_WARN_AGE: 7\n",
+    "\n",
+    "Assessment: Password-aging settings should be reviewed and aligned with the organization's security policy."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Access Control\n",
+    "\n",
+    "Interactive shell accounts identified included root and omoniyi.\n",
+    "\n",
+    "Assessment: Administrative privileges should be limited to authorized users and used only when required."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Firewall and SSH\n",
+    "\n",
+    "UFW firewall was active with a default-deny incoming policy.\n",
+    "\n",
+    "SSH service was active and running, with SSH listening on port 22. A localhost SSH test was successful.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Patching\n",
+    "\n",
+    "The system reported 60 packages available for upgrade.\n",
+    "\n",
+    "Recommendation: Review and apply available security and system updates regularly."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Logging\n",
+    "\n",
+    "systemd-journald was active and system logs were available through journalctl.\n",
+    "\n",
+    "Recommendation: Continue monitoring and reviewing system logs."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Backups\n",
+    "\n",
+    "No backup timer was identified during the review and the Déjà Dup command was not found.\n",
+    "\n",
+    "Assessment: A working backup configuration could not be confirmed. Regular backups should be configured and restoration should be tested."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Conclusion\n",
+    "\n",
+    "The Ubuntu system has basic defensive controls including an active firewall, SSH service, and system logging. Areas requiring attention include available system updates, password-aging configuration, and verification of a reliable backup process."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "name": "python",
+   "version": "3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
