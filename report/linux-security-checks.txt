@@ -38,6 +38,57 @@ system uptime
 Approximately 1 hour 43 minutes at the time of check
 
 summary
+password polict
+PASS_MAX_DAYS: 99999
+PASS_MIN_DAYS:0
+PASS_WARN_AGE: 7
+Assessment: Password aging controls should be reviewed and aligned with the organization's security policy.
 
-The ubuntu virtual machine was reviewed for basic defensive security configuration. The UFW firewall is active with incoming connections denied by default, while SSH access is explicitly allowed. The SSH service is running, enabled to start automatically, listening on port 22, and was successfully tested using an SSH connection to localhost.
+
+Access Control
+
+Interactive shell accounts identified:
+root
+omoniyi
+
+Assessment: The omoniyi account has administrative (sudo) access. Administrative privileges should be restricted to authorized users.
+
+
+Running Services
+
+Services reviewed included:
+accounts-daemon.service
+cron.service
+ssh.service
+
+Assessment: Running services were reviewed. Only required services should remain enabled.
+
+
+Patching and Updates
+
+Available package upgrades: 60
+
+Repositories observed:
+resolute-updates
+resolute-security
+
+Assessment: Updates are available and should be reviewed and applied, particularly security updates.
+
+
+Logging
+
+systemd-journald status: active
+
+Recent system log entries were available using journalctl.
+
+Assessment: System logging is active and should continue to be monitored.
+
+
+Backups
+
+Déjà Dup command: not found
+Backup timer: not identified
+
+Assessment: A working backup configuration was not confirmed during this review. Regular backups should be configured and restoration should be tested.
+
 
