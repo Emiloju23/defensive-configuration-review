@@ -54,3 +54,46 @@ Overall Assessment
 The Ubuntu virtual machine has basic defensive security controls configured. The UFW firewall is active, SSH is operational and enabled, and SSH connectivity has been successfully tested.
 
 Regular system updates, firewall-rule reviews, strong SSH authentication, and security monitoring are recommended.
+Patching and Updates
+
+Priority: Medium
+
+Finding: 60 packages are available for upgrade, including packages from resolute-updates and resolute-security.
+
+Recommendation: Apply available security and system updates regularly.
+
+
+Logging
+
+Priority: Low
+
+Finding: systemd-journald is active and recent system logs were available.
+
+Recommendation: Continue monitoring and reviewing system logs.
+
+
+Backups
+
+Priority: High
+
+Finding: No backup timer was identified and the deja-dup command was not found. A working backup configuration could not be confirmed.
+
+Recommendation: Configure regular backups and test restoration periodically.
+
+
+Password Policy
+
+Priority: Medium
+
+Finding: PASS_MAX_DAYS is 99999 days, PASS_MIN_DAYS is 0, and PASS_WARN_AGE is 7 days.
+
+Recommendation: Review password-aging settings and align them with the organization's security policy.
+
+
+Access Control
+
+Priority: Medium
+
+Finding: The root and omoniyi accounts have interactive shell access. Administrative access should be limited to authorized users.
+
+Recommendation: Review privileged accounts
